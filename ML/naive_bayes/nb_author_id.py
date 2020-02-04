@@ -29,8 +29,15 @@ features_train, features_test, labels_train, labels_test = preprocess()
 from sklearn.naive_bayes import GaussianNB
 
 classifier = GaussianNB()
+#timing
+t0 = time()
 classifier.fit(features_train, labels_train)
+print("Training time:", round(time()-t0, 3))
+
+#timing
+t1 = time()
 pred = classifier.predict(features_test)
+print("training time:", round(time()-t1, 3))
 #########################################################
 
 ### Accuracy of the classifier
