@@ -25,7 +25,7 @@ labels_train = labels_train[:len(labels_train)//100]
 #########################################################
 ### your code goes here ###
 from sklearn.svm import SVC
-clf = SVC(kernel="linear")
+clf = SVC(kernel="rbf")
 
 #time
 t0 = time()
